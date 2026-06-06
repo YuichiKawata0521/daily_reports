@@ -10,23 +10,29 @@
 ## CustomUser
 - id
 - employeeNo
-- firstName
+
+- firstName(AbstractUserに含まれる)
 - middleName
-- lastName
+- lastName(AbstractUserに含まれる)
 - sex
 - birth_date
-- email
+- email(AbstractUserに含まれる)
+- tel
+
+- password(AbstractUserに含まれる)
+- role
+
 - postcode
 - prefecture
 - city
 - address1
 - address2
-- password
-- role
-- tel
+
+- department
+
 - createdAt
 - updatedAt
-- isActive
+- isActive(AbstractUserに含まれる)
 
 ## departments (自己参照)
 - id
@@ -35,11 +41,6 @@
 - createdAt
 - updatedAt
 - isActive
-
-## user_department (中間テーブル)
-- userId
-- departmentId
-
 ## roles
 - id
 - role
@@ -48,6 +49,15 @@
 - isActive
 
 ## daily_reports
+- id
+- userId
+- title
+- content
+- createdAt
+- updatedAt
+- status(textchoice)
+
+## weekly_reports
 - id
 - userId
 - title
